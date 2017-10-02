@@ -1,21 +1,31 @@
 <resources>
     <string name="app_name">ClubMercado</string>
 
+    <!-- Screen titles -->
     <string name="header_recepcion">RECEPCIÓN PRODUCTOS PROVEEDOR</string>
     <string name="header_dashboard">DASHBOARD</string>
     <string name="punto_de_entrega">PDE</string>
+    <string name="calendario_compras">Calendario Compras - PDE</string>
+
+    <!-- Text labels -->
     <string name="fecha">Fecha</string>
     <string name="compra">Compra</string>
 
-    <string name="calendario_compras">Calendario Compras - PDE</string>
+    <!-- Button titles -->
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="join">Únete</string>
+
+    <!-- Placeholders -->
+    <string name="pde_placeholder">Chacao - Vallis</string>
+    <string name="fecha_placeholder">25/08/2017</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
 
-    <string name="pde_placeholder">Chacao - Vallis</string>
-    <string name="fecha_placeholder">25/08/2017</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
