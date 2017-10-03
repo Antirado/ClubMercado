@@ -2,13 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.analiticom.clubmercado.landing">
-
-    <ImageView
-        android:id="@+id/landing_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/landing_image" />
 
     <RelativeLayout
         android:id="@+id/header_title"
@@ -28,6 +23,13 @@
             android:textSize="@dimen/header_textsize"
             android:visibility="invisible"/>
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/landing_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_title"
+        android:src="@drawable/landing_image" />
 
     <LinearLayout
         android:id="@+id/footer"
