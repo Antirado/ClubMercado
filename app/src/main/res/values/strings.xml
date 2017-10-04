@@ -6,14 +6,23 @@
     <string name="header_dashboard">DASHBOARD</string>
     <string name="punto_de_entrega">PDE</string>
     <string name="calendario_compras">Calendario Compras - PDE</string>
+    <string name="session_init">Inicio de Sesión</string>
 
     <!-- Text labels -->
     <string name="fecha">Fecha</string>
     <string name="compra">Compra</string>
+    <string name="sign_up">¿No tienes cuenta? REGISTRATE</string>
+    <string name="forgot_password">¿Olvidaste contraseña?</string>
+
 
     <!-- Button titles -->
     <string name="iniciar_sesion">Iniciar sesión</string>
     <string name="join">Únete</string>
+    <string name="action_sign_in">Iniciar Sesión</string>
+
+    <!-- Hints -->
+    <string name="hint_email">Correo Electrónico</string>
+    <string name="hint_password">Contraseña</string>
 
     <!-- Placeholders -->
     <string name="pde_placeholder">Chacao - Vallis</string>
