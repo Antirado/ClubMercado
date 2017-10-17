@@ -97,8 +97,7 @@
             android:textAllCaps="true"
             android:text="@string/calendario_compras"
             android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:textSize="@dimen/header_textsize" />
+            android:textStyle="bold" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

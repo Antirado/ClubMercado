@@ -5,14 +5,16 @@
     <string name="header_recepcion">RECEPCIÓN PRODUCTOS PROVEEDOR</string>
     <string name="header_dashboard">DASHBOARD</string>
     <string name="punto_de_entrega">PDE</string>
-    <string name="calendario_compras">Calendario Compras - PDE</string>
+    <string name="calendario_compras">Calendario Compras</string>
     <string name="session_init">Inicio de Sesión</string>
+
 
     <!-- Text labels -->
     <string name="fecha">Fecha</string>
     <string name="compra">Compra</string>
     <string name="sign_up">¿No tienes cuenta? REGISTRATE</string>
     <string name="forgot_password">¿Olvidaste contraseña?</string>
+    <string name="select">Seleccione</string>
 
 
     <!-- Button titles -->
@@ -23,10 +25,15 @@
     <!-- Hints -->
     <string name="hint_email">Correo Electrónico</string>
     <string name="hint_password">Contraseña</string>
+    <string name="hint_item_type">TODAS</string>
 
     <!-- Placeholders -->
     <string name="pde_placeholder">Chacao - Vallis</string>
     <string name="fecha_placeholder">25/08/2017</string>
+
+    <!-- Content Descriptors -->
+    <string name="calendar_icon">Calendar icon</string>
+    <string name="session_init_icon">Session Init icon</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

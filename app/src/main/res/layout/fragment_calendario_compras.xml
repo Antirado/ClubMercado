@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.analiticom.clubmercado.CalendarioCompras">
+
+    <RelativeLayout
+        android:id="@+id/header_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/header_end_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textAllCaps="true"
+            android:text="@string/calendario_compras"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/calendar_icon"
+            android:contentDescription="@string/calendar_icon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@id/header_end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/select"
+            android:layout_alignBaseline="@id/spinner_item_type"
+            android:id="@+id/label_item_type"
+            android:textColor="@color/colorDarkGray"
+            android:textStyle="bold" />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_toEndOf="@id/label_item_type"
+            android:id="@+id/spinner_item_type"
+            android:entries="@string/hint_item_type"/>
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
