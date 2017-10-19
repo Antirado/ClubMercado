@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:padding="3dp"
-            android:text="@string/header_dashboard"
+            android:text="@string/inicio_sesion"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:textSize="@dimen/header_textsize"/>
