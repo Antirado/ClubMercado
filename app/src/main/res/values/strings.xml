@@ -21,12 +21,18 @@
     <string name="buy_selection">Compra/Colección</string>
     <string name="state">Estado</string>
     <string name="participants">Participantes</string>
+    <string name="number">No</string>
+    <string name="participant_and_phone">Participante/telefono</string>
+    <string name="participations">Participaciones</string>
+    <string name="phone">Teléfono</string>
 
 
     <!-- Button titles -->
     <string name="iniciar_sesion">Iniciar sesión</string>
     <string name="join">Únete</string>
     <string name="action_sign_in">Iniciar Sesión</string>
+    <string name="calendar">Calendario</string>
+
 
     <!-- Hints -->
     <string name="hint_email">Correo Electrónico</string>
@@ -42,6 +48,7 @@
     <string name="reception_placeholder">Recepción</string>
     <string name="preparation_placeholder">Preparación</string>
     <string name="delivery_placeholder">Entrega</string>
+    <string name="phone_placeholder">0414 4199040</string>
 
 
     <!-- Content Descriptors -->
