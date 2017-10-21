@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link CalendarioCompras.OnFragmentInteractionListener} interface
+ * {@link PurchaseParticipants.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link CalendarioCompras#newInstance} factory method to
+ * Use the {@link PurchaseParticipants#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CalendarioCompras extends Fragment {
+public class PurchaseParticipants extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class CalendarioCompras extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public CalendarioCompras() {
+    public PurchaseParticipants() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class CalendarioCompras extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CalendarioCompras.
+     * @return A new instance of fragment PurchaseParticipants.
      */
     // TODO: Rename and change types and number of parameters
-    public static CalendarioCompras newInstance(String param1, String param2) {
-        CalendarioCompras fragment = new CalendarioCompras();
+    public static PurchaseParticipants newInstance(String param1, String param2) {
+        PurchaseParticipants fragment = new PurchaseParticipants();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +64,7 @@ public class CalendarioCompras extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calendario_compras, container, false);
+        return inflater.inflate(R.layout.fragment_purchase_participants, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

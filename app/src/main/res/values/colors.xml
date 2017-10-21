@@ -9,7 +9,14 @@
     <color name="colorPrimaryRed">#AE3C2C</color>
     <color name="colorBlack">#000000</color>
     <color name="colorLightBlue">#95cbff</color>
-    <color name="colorYellow">#f2cf42</color>
-    <color name="colorGreen">#2e782e</color>
+    <color name="colorYellow">#e7c12a</color>
+    <color name="colorLightYellow">#f2eb89</color>
+    <color name="colorGreen">#2bb900</color>
+    <color name="colorLightGreen">#69f569</color>
+    <color name="colorRed">#f5292d</color>
+    <color name="colorLightRed">#d46a6c</color>
+
+
+
 
 </resources>

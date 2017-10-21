@@ -9,6 +9,8 @@
     <string name="calendario_compras">Calendario Compras</string>
     <string name="compras_dia">Compras del día - 15/08/2017</string>
     <string name="session_init">Inicio de Sesión</string>
+    <string name="purchase">Compra</string>
+    <string name="purchase_participants">Participantes en compra</string>
 
 
     <!-- Text labels -->
@@ -25,6 +27,15 @@
     <string name="participant_and_phone">Participante/telefono</string>
     <string name="participations">Participaciones</string>
     <string name="phone">Teléfono</string>
+    <string name="participant">Participante</string>
+    <string name="products">Productos</string>
+    <string name="participant_phone">Participante/Teléfono</string>
+    <string name="pending_retrieval">Pendiente x retirar</string>
+    <string name="phone_abb">Telf</string>
+    <string name="SMS">SMS</string>
+    <string name="email">e-mail</string>
+
+
 
 
     <!-- Button titles -->
@@ -32,6 +43,18 @@
     <string name="join">Únete</string>
     <string name="action_sign_in">Iniciar Sesión</string>
     <string name="calendar">Calendario</string>
+    <string name="downloaded_data">Datos bajados</string>
+    <string name="purchase_reception">Recepción compra</string>
+    <string name="returns">Devolución proveedor</string>
+    <string name="previous_prep">Preparación previa</string>
+    <string name="waste">Desperdicio</string>
+    <string name="delivery_prep">Preparación entregas</string>
+    <string name="delivery_participants">Entrega a participantes</string>
+    <string name="no_accept">No aceptación</string>
+    <string name="day_purchase">Compras del día</string>
+    <string name="transmit_purchase">Transmitir compra</string>
+    <string name="send_message">Enviar</string>
+
 
 
     <!-- Hints -->
@@ -49,18 +72,18 @@
     <string name="preparation_placeholder">Preparación</string>
     <string name="delivery_placeholder">Entrega</string>
     <string name="phone_placeholder">0414 4199040</string>
-
+    <string name="purchase_id_placeholder">80165</string>
+    <string name="veggie_disjobel_placeholder">Veggie/Disjobel</string>
+    <string name="qty_placeholder">0,50 Kg</string>
 
     <!-- Content Descriptors -->
     <string name="calendar_icon">Calendar icon</string>
     <string name="session_init_icon">Session Init icon</string>
 
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
