@@ -11,6 +11,8 @@
     <string name="session_init">Inicio de Sesión</string>
     <string name="purchase">Compra</string>
     <string name="purchase_participants">Participantes en compra</string>
+    <string name="header_day_participations">Participante - Participaciones del día</string>
+    <string name="header_transmit_data">Transmitir información compra</string>
 
 
     <!-- Text labels -->
@@ -29,13 +31,20 @@
     <string name="phone">Teléfono</string>
     <string name="participant">Participante</string>
     <string name="products">Productos</string>
+    <string name="product">Producto</string>
     <string name="participant_phone">Participante/Teléfono</string>
     <string name="pending_retrieval">Pendiente x retirar</string>
     <string name="phone_abb">Telf</string>
+    <string name="units_abb">Unds</string>
     <string name="SMS">SMS</string>
     <string name="email">e-mail</string>
-
-
+    <string name="purchases">Productos</string>
+    <string name="participation_auth_products">Participación/Autorización/Productos</string>
+    <string name="authorized">Autorizada</string>
+    <string name="delivered">Entregado</string>
+    <string name="qty_asked">Cantidad pedida</string>
+    <string name="qty_delivered">Cantidad entregada</string>
+    <string name="supplier">Proveedor</string>
 
 
     <!-- Button titles -->
@@ -54,13 +63,20 @@
     <string name="day_purchase">Compras del día</string>
     <string name="transmit_purchase">Transmitir compra</string>
     <string name="send_message">Enviar</string>
-
+    <string name="transmit_button1">Facturas y Recepción Enviadas</string>
+    <string name="transmit_button2">Enviando Entregas Participantes</string>
+    <string name="transmit_button3">Borrar Compra del Móvil</string>
+    <string name="receive_button1">Orden de Compra\nProducto a Recibir de proveedor</string>
+    <string name="receive_button2">Participaciones - Picking</string>
+    <string name="receive_button3">Actualizar Base de Datos Local</string>
 
 
     <!-- Hints -->
     <string name="hint_email">Correo Electrónico</string>
     <string name="hint_password">Contraseña</string>
     <string name="hint_item_type">TODAS</string>
+    <string name="search">Buscar</string>
+
 
     <!-- Placeholders -->
     <string name="pde_placeholder">Chacao - Vallis</string>
@@ -75,6 +91,9 @@
     <string name="purchase_id_placeholder">80165</string>
     <string name="veggie_disjobel_placeholder">Veggie/Disjobel</string>
     <string name="qty_placeholder">0,50 Kg</string>
+    <string name="name_placeholder">Andrés Tirado</string>
+    <string name="product_placeholder">Aguacate Polo Verde</string>
+
 
     <!-- Content Descriptors -->
     <string name="calendar_icon">Calendar icon</string>

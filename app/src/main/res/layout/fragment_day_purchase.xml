@@ -12,7 +12,9 @@
         android:id="@+id/header_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/header_background">
+        android:background="@drawable/header_background"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
 
         <TextView
             android:id="@+id/header_title_text"
@@ -31,7 +33,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/header_title">
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
 
         <TextView
             android:id="@+id/header_pde_title"
@@ -86,7 +90,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/header_body">
+        app:layout_constraintTop_toBottomOf="@+id/header_body"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
 
         <TextView
             android:id="@+id/header_end_text"
@@ -104,6 +110,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:baselineAligned="false"
         android:id="@+id/progress_layout_compras_dia"
         android:padding="5dp"
         app:layout_constraintTop_toBottomOf="@+id/header_end">
@@ -224,6 +231,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_line"
         android:orientation="horizontal"
+        android:baselineAligned="false"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
         app:layout_constraintTop_toBottomOf="@id/progress_layout_compras_dia">
@@ -278,7 +286,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Participantes"
+                android:text="@string/participants"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -298,7 +306,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@id/compras_dia_container">
+        app:layout_constraintTop_toBottomOf="@id/compras_dia_container"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
 
         <TextView
             android:id="@+id/header_participants_text"
@@ -307,7 +317,7 @@
             android:gravity="center"
             android:padding="3dp"
             android:textAllCaps="true"
-            android:text="Participantes"
+            android:text="@string/participants"
             android:textColor="@color/colorAccent"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -431,6 +441,7 @@
         android:id="@+id/participants_titles"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
         android:background="@drawable/bottom_line"

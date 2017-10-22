@@ -6,12 +6,15 @@
     android:layout_height="match_parent"
     android:id="@+id/full_screen"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.analiticom.clubmercado.PurchaseParticipants">
+    tools:context="com.analiticom.clubmercado.ParticipantDashboard">
+
     <RelativeLayout
         android:id="@+id/header_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/header_background">
+        android:background="@drawable/header_background"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
 
         <TextView
             android:id="@+id/header_title_text"
@@ -19,18 +22,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:padding="3dp"
-            android:text="@string/purchase_participants"
+            android:text="@string/header_dashboard"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
-            android:textAllCaps="true"
             android:textSize="@dimen/header_textsize" />
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/header_body"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/header_title">
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
 
         <TextView
             android:id="@+id/header_pde_title"
@@ -79,80 +84,138 @@
             android:textColor="@color/colorBlack"
             android:padding="5dp"/>
     </RelativeLayout>
-    <LinearLayout
+
+    <RelativeLayout
+        android:id="@+id/header_end"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/header_body"
         app:layout_constraintRight_toRightOf="@id/full_screen"
-        app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        android:id="@+id/purchase_id_container"
-        android:background="@drawable/bottom_line"
-        android:padding="5dp"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
+
+        <TextView
+            android:id="@+id/header_end_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textAllCaps="true"
+            android:text="@string/header_day_participations"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/participant_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/header_body">
+        android:padding="5dp"
+        android:weightSum="1"
+        app:layout_constraintTop_toBottomOf="@+id/header_end"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:layout_weight="0.25"
-            android:text="@string/purchase"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:layout_weight="0.25"
+            android:layout_margin="2dp"
             android:background="@drawable/rounded_corners_light_blue"
-            android:text="@string/purchase_id_placeholder" />
+            android:layout_weight="0.8"
+            android:text="@string/name_placeholder"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/participant_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp"
+        android:weightSum="0.8"
+        app:layout_constraintTop_toBottomOf="@+id/participant_name"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/bottom_line"
-            android:layout_weight="0.7"
-            android:padding="3dp"
-            android:text="@string/veggie_disjobel_placeholder"/>
+            android:layout_weight="0.2"
+            android:layout_margin="2dp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/phone"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_margin="2dp"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:textStyle="bold"
+            android:text="@string/phone_placeholder"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:id="@+id/participation_progress"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        android:id="@+id/participant_searchbar"
         android:padding="5dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/purchase_id_container">
+        app:layout_constraintTop_toBottomOf="@id/participant_number">
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0.2"
             android:padding="3dp"
-            android:layout_weight="0.25"
-            android:labelFor="@+id/search_name"
-            android:text="@string/participant"/>
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:padding="3dp"
-            android:id="@id/search_product"
-            android:layout_weight="0.25"
-            android:drawableEnd="@drawable/search_icon_black"
-            android:background="@drawable/rounded_corners_transparent"/>
+            android:gravity="center"
+            android:text="@string/purchases"/>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1">
+            android:layout_weight="0.85">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="3dp"
+                android:padding="5dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/rounded_corners_light_blue"
-                android:text="16"/>
+                android:background="@drawable/rounded_layout_yellow"
+                android:textColor="@color/colorAccent"
+                android:text="4"/>
         </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:progress="90"
+            android:layout_gravity="center"
+            style="@style/MyProgressBarYellow"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:padding="3dp"
+            android:text="@string/products"/>
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:layout_weight="0.25"
-            android:text="@string/participants"/>
+            android:layout_weight="0.85">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@drawable/rounded_corners_green"
+                android:textColor="@color/colorAccent"
+                android:text="16"/>
+        </RelativeLayout>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:progress="60"
+            android:layout_gravity="center"
+            style="@style/MyProgressBarGreen"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/participant_titles"
@@ -163,7 +226,7 @@
         android:orientation="horizontal"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        app:layout_constraintTop_toBottomOf="@id/participant_searchbar">
+        app:layout_constraintTop_toBottomOf="@id/participation_progress">
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -187,7 +250,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/participant_phone"
+                android:text="@string/participation_auth_products"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -207,15 +270,13 @@
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/participant_container"
+        android:id="@+id/participations_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/bottom_line"
         android:orientation="vertical"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
         app:layout_constraintTop_toBottomOf="@id/participant_titles">
-
     </LinearLayout>
     <LinearLayout
         android:layout_width="0dp"
@@ -225,7 +286,7 @@
         android:padding="5dp"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        app:layout_constraintTop_toBottomOf="@id/participant_container">
+        app:layout_constraintTop_toBottomOf="@id/participations_container">
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
