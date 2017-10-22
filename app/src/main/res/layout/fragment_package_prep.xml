@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/full_screen"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".PurchaseParticipants$ReceiveProductsSupplier">
-
+    tools:context="com.analiticom.clubmercado.PackagePrep">
     <RelativeLayout
         android:id="@+id/header_title"
         android:layout_width="0dp"
@@ -166,7 +165,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/solicited"
+                android:text="Cantidad"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -174,22 +173,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="2"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/received"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="2"
+            android:layout_weight="1.5"
             android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -204,13 +188,28 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="2.5"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Presentación"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:gravity="center_vertical"
             android:layout_weight="2">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/price_bs"
+                android:text="Contenido"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -218,11 +217,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.25">
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_centerInParent="true" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pencil_icon_black"/>
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout
@@ -234,6 +233,7 @@
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
         app:layout_constraintTop_toBottomOf="@id/product_titles">
+        
     </LinearLayout>
     <LinearLayout
         android:id="@+id/footer"
@@ -263,3 +263,4 @@
             android:text="Limpiar"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
+
