@@ -14,6 +14,7 @@
     <string name="header_day_participations">Participante - Participaciones del día</string>
     <string name="header_transmit_data">Transmitir información compra</string>
     <string name="receive_products_supplier">Recepción productos proveedor</string>
+    <string name="return_supplier_product">Devolución productos proveedor</string>
 
 
 
@@ -51,8 +52,6 @@
     <string name="received">Recibido</string>
     <string name="UDM">UDM</string>
     <string name="price_bs">Precio Bs</string>
-
-
 
 
     <!-- Button titles -->
