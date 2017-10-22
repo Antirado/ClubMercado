@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:id="@+id/full_screen"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.analiticom.clubmercado.PurchaseParticipants">
+    tools:context=".PurchaseParticipants$ReceiveProductsSupplier">
+
     <RelativeLayout
         android:id="@+id/header_title"
         android:layout_width="0dp"
@@ -19,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:padding="3dp"
-            android:text="@string/purchase_participants"
+            android:text="@string/receive_products_supplier"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:textAllCaps="true"
@@ -115,47 +116,33 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        android:id="@+id/participant_searchbar"
+        android:id="@+id/product_searchbar"
         android:padding="5dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/purchase_id_container">
+        app:layout_constraintTop_toBottomOf="@id/purchase_id_container">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="3dp"
-            android:layout_weight="0.25"
-            android:labelFor="@+id/search_participant"
-            android:text="@string/participant"/>
+            android:layout_weight="0.1"
+            android:labelFor="@+id/search_product"
+            android:text="@string/product"/>
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:padding="3dp"
-            android:id="@id/search_participant"
-            android:layout_weight="0.25"
+            android:id="@id/search_product"
+            android:layout_weight="0.3"
             android:drawableEnd="@drawable/search_icon_black"
             android:background="@drawable/rounded_corners_transparent"/>
-        <RelativeLayout
+        <CheckBox
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/rounded_corners_light_blue"
-                android:text="16"/>
-        </RelativeLayout>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:layout_weight="0.25"
-            android:text="@string/participants"/>
+            android:layout_weight="0.05"/>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/participant_titles"
+        android:id="@+id/product_titles"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
@@ -163,17 +150,31 @@
         android:orientation="horizontal"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        app:layout_constraintTop_toBottomOf="@id/participant_searchbar">
+        app:layout_constraintTop_toBottomOf="@id/product_searchbar">
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="1.3">
+            android:layout_weight="2"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/solicited"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/number"
+                android:text="@string/received"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -182,12 +183,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="3">
+            android:layout_weight="2"
+            android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/participant_phone"
+                android:text="@string/UDM"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -196,85 +198,64 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="1.5">
+            android:gravity="center_vertical"
+            android:layout_weight="2">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/state"
+                android:text="@string/price_bs"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true" />
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/participant_container"
+        android:id="@+id/products_received_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_line"
         android:orientation="vertical"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        app:layout_constraintTop_toBottomOf="@id/participant_titles">
-
+        app:layout_constraintTop_toBottomOf="@id/product_titles">
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/footer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/footer"
         android:orientation="horizontal"
-        android:padding="5dp"
+        android:gravity="center"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        app:layout_constraintTop_toBottomOf="@id/participant_container">
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:padding="5dp"
-                android:background="@drawable/rounded_corners_gray"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold"
-                android:text="@string/purchase"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:gravity="center"
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:background="@drawable/rounded_corners_green"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold"
-                android:text="@string/send_message"/>
-        </RelativeLayout>
-        <CheckBox
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.8"
-            android:gravity="center"/>
+        app:layout_constraintTop_toBottomOf="@id/products_received_container">
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1.6"
-            android:text="@string/SMS"/>
-        <CheckBox
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.8"
-            android:gravity="center"/>
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners_blue"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="true"
+            android:text="Guardar"/>
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/email"/>
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners_gray"
+            android:textColor="@color/colorAccent"
+            android:text="Limpiar"/>
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

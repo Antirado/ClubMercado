@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="8"
+            android:textColor="@color/colorBlack"
+            android:text="@string/product_placeholder"
+            android:textStyle="bold" />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1.25" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="12,00"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners_transparent"
+            android:layout_weight="1.9"
+            android:textColor="@color/colorBlack"
+            android:text="11,50"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="Kg"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners_transparent"
+            android:layout_weight="2.3"
+            android:textColor="@color/colorBlack"
+            android:text="123.456,50"
+            android:textStyle="bold" />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"/>
+    </LinearLayout>
+
+</LinearLayout>

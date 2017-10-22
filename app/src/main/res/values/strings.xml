@@ -13,6 +13,8 @@
     <string name="purchase_participants">Participantes en compra</string>
     <string name="header_day_participations">Participante - Participaciones del día</string>
     <string name="header_transmit_data">Transmitir información compra</string>
+    <string name="receive_products_supplier">Recepción productos proveedor</string>
+
 
 
     <!-- Text labels -->
@@ -45,6 +47,12 @@
     <string name="qty_asked">Cantidad pedida</string>
     <string name="qty_delivered">Cantidad entregada</string>
     <string name="supplier">Proveedor</string>
+    <string name="solicited">Solicitado</string>
+    <string name="received">Recibido</string>
+    <string name="UDM">UDM</string>
+    <string name="price_bs">Precio Bs</string>
+
+
 
 
     <!-- Button titles -->

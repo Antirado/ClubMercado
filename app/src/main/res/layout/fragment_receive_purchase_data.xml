@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/full_screen"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="layout.ReceivePurchaseData">
+    tools:context=".PurchaseDashboard$ReceivePurchaseData">
     <RelativeLayout
         android:id="@+id/header_title"
         android:layout_width="0dp"
