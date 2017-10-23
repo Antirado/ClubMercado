@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/full_screen"
-    tools:context="com.analiticom.clubmercado.ParticipationPrep">
+    tools:context="com.analiticom.clubmercado.ParticipationProductPrep">
 
     <RelativeLayout
         android:id="@+id/header_title"
@@ -129,7 +129,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="3dp"
-            android:layout_weight="0.1"
+            android:layout_weight="0.08"
             android:labelFor="@+id/search_product"
             android:text="@string/product"/>
         <EditText
@@ -138,13 +138,14 @@
             android:inputType="text"
             android:padding="3dp"
             android:id="@id/search_product"
-            android:layout_weight="0.3"
+            android:layout_weight="0.23"
+            android:text="Aguacate Polo Verde"
             android:drawableEnd="@drawable/search_icon_black"
             android:background="@drawable/rounded_corners_transparent"/>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.09">
+            android:layout_weight="0.04">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -154,16 +155,104 @@
                 android:padding="5dp"
                 android:layout_gravity="center"
                 android:layout_centerInParent="true"
-                android:text="39"/>
+                android:text="7"/>
         </RelativeLayout>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="3dp"
-            android:layout_weight="0.11"
+            android:layout_weight="0.12"
             android:labelFor="@+id/search_product"
-            android:text="@string/products"/>
+            android:text="@string/participations"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/product_prep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="@id/full_screen"
+        app:layout_constraintLeft_toLeftOf="@id/full_screen"
+        app:layout_constraintTop_toBottomOf="@id/product_searchbar">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="1"
+            android:textColor="@color/colorBlack"
+            android:text="9,00"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="Kg"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="/"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="0.5"
+            android:textColor="@color/colorBlack"
+            android:text="8"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="Unds de"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="1,125"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:layout_weight="0.8"
+            android:textColor="@color/colorBlack"
+            android:text="Kg"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/product_titles"
@@ -174,7 +263,7 @@
         android:orientation="horizontal"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        app:layout_constraintTop_toBottomOf="@id/product_searchbar">
+        app:layout_constraintTop_toBottomOf="@id/product_prep">
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -184,7 +273,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cantidad"
+                android:text="Participación"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -192,13 +281,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="1.5"
+            android:layout_weight="2"
             android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/UDM"
+                android:text="Cantidad pedida"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -213,34 +302,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Presentación"
+                android:text="Cantidad entregada"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
-
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center_vertical"
-            android:layout_weight="2">
-            <TextView
+            android:layout_weight="1">
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Contenido"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.25">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/pencil_icon_black"/>
+                android:layout_centerInParent="true"/>
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout
@@ -252,8 +325,6 @@
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
         app:layout_constraintTop_toBottomOf="@id/product_titles">
-
-
     </LinearLayout>
     <LinearLayout
         android:id="@+id/footer"
