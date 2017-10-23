@@ -233,7 +233,7 @@
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
         app:layout_constraintTop_toBottomOf="@id/product_titles">
-        
+
     </LinearLayout>
     <LinearLayout
         android:id="@+id/footer"
