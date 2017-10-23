@@ -141,10 +141,21 @@
             android:layout_weight="0.3"
             android:drawableEnd="@drawable/search_icon_black"
             android:background="@drawable/rounded_corners_transparent"/>
-        <CheckBox
+        <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05"/>
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_weight="0.05"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners_light_blue"
+            android:text="39"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_weight="0.1"
+            android:text="@string/products"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/product_titles"
@@ -217,11 +228,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.25">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/pencil_icon_black"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout

@@ -5,13 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/full_screen"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.analiticom.clubmercado.ParticipantDelivery">
+    tools:context="com.analiticom.clubmercado.ParticipationPrep">
+
     <RelativeLayout
         android:id="@+id/header_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/header_background">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/truck_icon_white"/>
 
         <TextView
             android:id="@+id/header_title_text"
@@ -19,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:padding="3dp"
-            android:text="@string/delivery_participants"
+            android:text="Preparación participaciones"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:textAllCaps="true"
@@ -111,65 +117,6 @@
             android:text="@string/veggie_disjobel_placeholder"/>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/participant_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:weightSum="1"
-        app:layout_constraintTop_toBottomOf="@+id/purchase_id_container"
-        app:layout_constraintRight_toRightOf="@id/full_screen"
-        app:layout_constraintLeft_toLeftOf="@id/full_screen">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:background="@drawable/rounded_corners_light_blue"
-            android:layout_weight="0.8"
-            android:text="@string/name_placeholder"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/participant_number"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@+id/participant_name"
-        app:layout_constraintRight_toRightOf="@id/full_screen"
-        app:layout_constraintLeft_toLeftOf="@id/full_screen">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.2"
-            android:layout_margin="2dp"
-            android:textColor="@color/colorBlack"
-            android:text="@string/phone"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_margin="2dp"
-            android:textColor="@color/colorBlack"
-            android:background="@drawable/rounded_corners_light_blue"
-            android:textStyle="bold"
-            android:text="@string/phone_placeholder"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_weight="2"
-            android:layout_margin="2dp"
-            android:background="@drawable/rounded_corners_light_blue"
-            android:textColor="@color/colorBlack"
-            android:text="@string/delivered"/>
-        <CheckBox
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.8"/>
-    </LinearLayout>
-    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/full_screen"
@@ -177,13 +124,12 @@
         android:id="@+id/product_searchbar"
         android:padding="5dp"
         android:orientation="horizontal"
-        android:background="@drawable/bottom_line"
-        app:layout_constraintTop_toBottomOf="@+id/participant_number">
+        app:layout_constraintTop_toBottomOf="@id/purchase_id_container">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="3dp"
-            android:layout_weight="0.2"
+            android:layout_weight="0.1"
             android:labelFor="@+id/search_product"
             android:text="@string/product"/>
         <EditText
@@ -195,24 +141,10 @@
             android:layout_weight="0.3"
             android:drawableEnd="@drawable/search_icon_black"
             android:background="@drawable/rounded_corners_transparent"/>
-        <RelativeLayout
+        <CheckBox
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/rounded_corners_light_blue"
-                android:text="16"/>
-        </RelativeLayout>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:layout_weight="0.25"
-            android:text="@string/products"/>
+            android:layout_weight="0.05"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/product_titles"
@@ -228,12 +160,26 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="2.5">
+            android:layout_weight="2"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cantidad"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/product"
+                android:text="@string/UDM"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -242,12 +188,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="4">
+            android:layout_weight="2.5"
+            android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/qty_asked"
+                android:text="Presentación"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -256,18 +203,29 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="4.5">
+            android:gravity="center_vertical"
+            android:layout_weight="2">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/qty_delivered"
+                android:text="Contenido"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pencil_icon_black"/>
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/products_qty_container"
+        android:id="@+id/products_received_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_line"
@@ -275,23 +233,8 @@
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
         app:layout_constraintTop_toBottomOf="@id/product_titles">
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/send_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintRight_toRightOf="@id/full_screen"
-        app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        app:layout_constraintTop_toBottomOf="@id/products_qty_container">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:gravity="center"
-            android:text="Enviar mensaje"
-            android:textColor="@color/colorDarkGray" />
+
+
     </LinearLayout>
     <LinearLayout
         android:id="@+id/footer"
@@ -301,7 +244,7 @@
         android:gravity="center"
         app:layout_constraintRight_toRightOf="@id/full_screen"
         app:layout_constraintLeft_toLeftOf="@id/full_screen"
-        app:layout_constraintTop_toBottomOf="@id/send_message">
+        app:layout_constraintTop_toBottomOf="@id/products_received_container">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
